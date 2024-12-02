@@ -1,15 +1,9 @@
-import { defineConfig } from '@umijs/max';
-import routes from './config/routes';
+import { defineConfig } from "umi";
 
 export default defineConfig({
-  antd: {},
-  access: {},
-  model: {},
-  initialState: {},
-  request: {},
-  layout: {
-    title: '@umijs/max',
-  },
-  routes,
+  routes: [
+    { path: "/", component: "index" },
+    { path: "/docs", component: "docs" },
+  ],
   npmClient: 'pnpm',
 });
